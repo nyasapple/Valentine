@@ -1,10 +1,12 @@
-/* Home Page Styles */
-body.home {
+/* Global Styles */
+body {
     font-family: 'Georgia', serif;
     background-color: #ffd6e0;
     text-align: center;
     padding: 20px;
     position: relative;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* Title */
@@ -50,8 +52,8 @@ body.home {
     display: none;
     background: white;
     padding: 20px;
-    width: 90%; /* Adjust width for mobile */
-    max-width: 650px;
+    width: 90%; /* Makes it responsive */
+    max-width: 600px;
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -73,19 +75,15 @@ body.home {
     object-fit: cover;
     display: block;
     margin: 10px auto;
-    border-top: 10px solid transparent;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    border-radius: 5px;
 }
 
-.left-img {
-    float: left;
-    margin-right: 20px;
-}
-
-.right-img {
-    float: right;
-    margin-left: 20px;
+/* Ensuring Floated Images Don't Break Layout */
+.left-img, .right-img {
+    float: none;
+    display: block;
+    margin: 10px auto;
+    width: 80%;
 }
 
 /* Arrow to Tabs Page */
@@ -100,42 +98,6 @@ body.home {
     text-decoration: none;
     color: #d63384;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Tabs Page */
-body.tabs-page {
-    font-family: 'Georgia', serif;
-    background-color: #fff0f5;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Tab Buttons */
-.tabs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.tab-btn {
-    display: block;
-    background: #ffcccc;
-    border: none;
-    padding: 15px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 200px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-}
-
-.tab-btn:hover {
-    background: #ff6699;
-    color: white;
 }
 
 /* Floating Images */
@@ -165,28 +127,11 @@ body.tabs-page {
     100% { transform: translateY(0); }
 }
 
-/* Image Rows */
-.image-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.left-img, .center-img, .right-img {
-    width: 30%;
-    height: auto;
-    object-fit: cover;
-}
-
-.center-img {
-    margin: 0 auto;
-}
-
-/* Responsive Design */
+/* Making Everything Responsive */
 @media (max-width: 768px) {
     .title {
         font-size: 32px;
-        margin-top: 150px;
+        margin-top: 120px;
     }
 
     .letter {
@@ -197,10 +142,7 @@ body.tabs-page {
     }
 
     .left-img, .right-img {
-        float: none;
-        display: block;
-        margin: 10px auto;
-        width: 80%;
+        width: 100%;
     }
 
     .arrow-circle {
@@ -211,10 +153,5 @@ body.tabs-page {
     .floating-images img {
         width: 60px;
         height: 60px;
-    }
-
-    .image-row {
-        flex-direction: column;
-        align-items: center;
     }
 }
