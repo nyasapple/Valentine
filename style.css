@@ -7,10 +7,11 @@ body.home {
     position: relative;
 }
 
+/* Title */
 .title {
     font-size: 40px;
     color: #ec1ba0;
-    margin-top: 250px;
+    margin-top: 200px;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
@@ -44,12 +45,13 @@ body.home {
     top: 10px;
 }
 
+/* Letter Styling */
 .letter {
     display: none;
     background: white;
     padding: 20px;
-    width: 100%; /* Full width of the container */
-    max-width: 650px; /* Increased width */
+    width: 90%; /* Adjust width for mobile */
+    max-width: 650px;
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -58,23 +60,22 @@ body.home {
     transform: translate(-50%, -50%);
     text-align: left;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 25px;
-    max-height: 450px; /* Added max height */
-    overflow-y: auto; /* Enables scrolling */
+    font-size: 22px;
+    max-height: 450px;
+    overflow-y: auto;
 }
 
 /* Style for Images Inside the Letter */
 .letter img {
-    width: 200px; /* Set square size */
-    height: 200px;
-    object-fit: cover; /* Ensures images are properly cropped */
-    margin: 10px 0; /* Adds spacing */
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 10px solid transparent; /* Invisible border on top */
-    border-left: 10px solid transparent; /* Invisible border on the left */
-    border-right: 10px solid transparent; /* Invisible border on the right */
+    margin: 10px auto;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
 .left-img {
@@ -109,6 +110,7 @@ body.tabs-page {
     padding: 20px;
 }
 
+/* Tab Buttons */
 .tabs {
     display: flex;
     flex-direction: column;
@@ -136,21 +138,22 @@ body.tabs-page {
     color: white;
 }
 
+/* Floating Images */
 .floating-images {
     position: absolute;
-    top: 20px; /* Adjust based on where you want them to float */
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    z-index: -1; /* Ensure they are behind the envelope/letter */
+    z-index: -1;
 }
 
 .floating-images img {
-    width: 80px; /* Smaller size for floating images */
-    height: 80px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     border-radius: 50%;
     animation: floatAnimation 5s ease-in-out infinite;
@@ -162,18 +165,56 @@ body.tabs-page {
     100% { transform: translateY(0); }
 }
 
+/* Image Rows */
 .image-row {
     display: flex;
-    justify-content: space-between; /* Distributes images across the row */
-    margin-bottom: 20px; /* Adds space between rows */
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .left-img, .center-img, .right-img {
-    width: 30%; /* Adjust the width as needed for your images */
+    width: 30%;
     height: auto;
     object-fit: cover;
 }
 
 .center-img {
-    margin: 0 auto; /* Centers the image in the middle */
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+        margin-top: 150px;
+    }
+
+    .letter {
+        width: 95%;
+        max-width: 90%;
+        font-size: 18px;
+        max-height: 350px;
+    }
+
+    .left-img, .right-img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .arrow-circle {
+        right: 10px;
+        font-size: 25px;
+    }
+
+    .floating-images img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
 }
