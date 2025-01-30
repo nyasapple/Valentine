@@ -1,0 +1,179 @@
+/* Home Page Styles */
+body.home {
+    font-family: 'Georgia', serif;
+    background-color: #ffd6e0;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.title {
+    font-size: 40px;
+    color: #ec1ba0;
+    margin-top: 250px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* Envelope Design */
+.envelope-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.envelope {
+    width: 120px;
+    height: 100px;
+    background: white;
+    border: 2px solid #d63384;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.heart {
+    font-size: 24px;
+    color: #d63384;
+    position: absolute;
+    top: 10px;
+}
+
+.letter {
+    display: none;
+    background: white;
+    padding: 20px;
+    width: 100%; /* Full width of the container */
+    max-width: 650px; /* Increased width */
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    max-height: 450px; /* Added max height */
+    overflow-y: auto; /* Enables scrolling */
+}
+
+/* Style for Images Inside the Letter */
+.letter img {
+    width: 200px; /* Set square size */
+    height: 200px;
+    object-fit: cover; /* Ensures images are properly cropped */
+    margin: 10px 0; /* Adds spacing */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 10px solid transparent; /* Invisible border on top */
+    border-left: 10px solid transparent; /* Invisible border on the left */
+    border-right: 10px solid transparent; /* Invisible border on the right */
+}
+
+.left-img {
+    float: left;
+    margin-right: 20px;
+}
+
+.right-img {
+    float: right;
+    margin-left: 20px;
+}
+
+/* Arrow to Tabs Page */
+.arrow-circle {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    font-size: 30px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #d63384;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabs Page */
+body.tabs-page {
+    font-family: 'Georgia', serif;
+    background-color: #fff0f5;
+    text-align: center;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.tab-btn {
+    display: block;
+    background: #ffcccc;
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.tab-btn:hover {
+    background: #ff6699;
+    color: white;
+}
+
+.floating-images {
+    position: absolute;
+    top: 20px; /* Adjust based on where you want them to float */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    z-index: -1; /* Ensure they are behind the envelope/letter */
+}
+
+.floating-images img {
+    width: 80px; /* Smaller size for floating images */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: floatAnimation 5s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between; /* Distributes images across the row */
+    margin-bottom: 20px; /* Adds space between rows */
+}
+
+.left-img, .center-img, .right-img {
+    width: 30%; /* Adjust the width as needed for your images */
+    height: auto;
+    object-fit: cover;
+}
+
+.center-img {
+    margin: 0 auto; /* Centers the image in the middle */
+}
