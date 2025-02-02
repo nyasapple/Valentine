@@ -1,6 +1,5 @@
 /* Import Comic Sans MS for better cross-device consistency */
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 /* Universal Styles */
 * {
     margin: 0;
@@ -69,7 +68,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
-    font-family: "Patrick Hand", cursive, sans-serif;
+    font-family: "Caveat", cursive, sans-serif;
     font-size: 25px;
     max-height: 450px;
     overflow-y: auto;
