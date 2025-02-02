@@ -5,53 +5,61 @@ body.home {
     font-family: 'Georgia', serif;
     background-color: #ffd6e0;
     text-align: center;
-    padding: 20px;
-    position: relative;
+    margin: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers everything vertically */
+    align-items: center; /* Centers everything horizontally */
 }
 
+/* Title */
 .title {
     font-size: 40px;
     color: #ec1ba0;
-    margin-top: 250px;
     font-family: "Patrick Hand", cursive, sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Envelope Container */
+.envelope-wrapper {
+    position: relative;
+    width: 150px;
+    height: 120px;
 }
 
 /* Envelope Design */
-.envelope-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-}
-
 .envelope {
-    width: 120px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     background: white;
     border: 2px solid #d63384;
     border-radius: 10px;
-    position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
+/* Heart inside Envelope */
 .heart {
-    font-size: 24px;
+    font-size: 30px;
     color: #d63384;
     position: absolute;
-    top: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+/* Letter Popup */
 .letter {
     display: none;
     background: white;
     padding: 20px;
-    width: 100%; /* Full width of the container */
-    max-width: 650px; /* Increased width */
+    width: 100%;
+    max-width: 650px;
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -61,8 +69,8 @@ body.home {
     text-align: left;
     font-family: "Patrick Hand", cursive, sans-serif;
     font-size: 25px;
-    max-height: 650px; /* Added max height */
-    overflow-y: auto; /* Enables scrolling */
+    max-height: 450px;
+    overflow-y: auto;
 }
 
 /* Style for Images Inside the Letter */
@@ -93,7 +101,7 @@ body.home {
 .arrow-circle {
     position: fixed;
     right: 20px;
-    top: 50%;
+    bottom: 20px;
     font-size: 30px;
     background: white;
     padding: 10px;
