@@ -1,13 +1,7 @@
-/* Import Comic Sans MS for better cross-device consistency */
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-/* Universal Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
-body {
+/* Home Page Styles */
+body.home {
     font-family: 'Georgia', serif;
     background-color: #ffd6e0;
     text-align: center;
@@ -15,15 +9,14 @@ body {
     position: relative;
 }
 
-/* Title Styling */
 .title {
     font-size: 40px;
     color: #ec1ba0;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    margin-top: 200px;
+    margin-top: 250px;
+    font-family: "Patrick Hand", cursive, sans-serif;
 }
 
-/* Envelope Wrapper */
+/* Envelope Design */
 .envelope-wrapper {
     display: flex;
     flex-direction: column;
@@ -32,7 +25,6 @@ body {
     height: 70vh;
 }
 
-/* Envelope Design */
 .envelope {
     width: 120px;
     height: 100px;
@@ -54,13 +46,12 @@ body {
     top: 10px;
 }
 
-/* Letter Styling */
 .letter {
     display: none;
     background: white;
     padding: 20px;
-    width: 90%; /* Adjusted for smaller screens */
-    max-width: 650px; /* Keeps size consistent */
+    width: 100%; /* Full width of the container */
+    max-width: 650px; /* Increased width */
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -68,20 +59,24 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
-    font-family: "Caveat", cursive, sans-serif;
+    font-family: "Patrick Hand", cursive, sans-serif;
     font-size: 25px;
-    max-height: 450px;
-    overflow-y: auto;
+    max-height: 450px; /* Added max height */
+    overflow-y: auto; /* Enables scrolling */
 }
 
 /* Style for Images Inside the Letter */
 .letter img {
-    width: 200px;
+    width: 200px; /* Set square size */
     height: 200px;
-    object-fit: cover;
-    margin: 10px auto;
+    object-fit: cover; /* Ensures images are properly cropped */
+    margin: 10px 0; /* Adds spacing */
     display: block;
-    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 10px solid transparent; /* Invisible border on top */
+    border-left: 10px solid transparent; /* Invisible border on the left */
+    border-right: 10px solid transparent; /* Invisible border on the right */
 }
 
 .left-img {
@@ -94,16 +89,7 @@ body {
     margin-left: 20px;
 }
 
-/* Responsive Image Alignment */
-@media (max-width: 768px) {
-    .left-img, .right-img {
-        float: none;
-        display: block;
-        margin: 10px auto;
-    }
-}
-
-/* Arrow to Navigate to Tabs Page */
+/* Arrow to Tabs Page */
 .arrow-circle {
     position: fixed;
     right: 20px;
@@ -152,104 +138,19 @@ body.tabs-page {
     color: white;
 }
 
-/* Floating Images */
-.floating-images {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    z-index: -1;
-    width: 100%;
-}
-
-.floating-images img {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    border-radius: 50%;
-    animation: floatAnimation 5s ease-in-out infinite;
-}
-
-/* Floating Animation */
-@keyframes floatAnimation {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-/* Image Row for Bottom Images */
+/* Image Rows */
 .image-row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: space-between; /* Distributes images across the row */
+    margin-bottom: 20px; /* Adds space between rows */
 }
 
-.image-row img {
-    width: 30%;
+.left-img, .center-img, .right-img {
+    width: 30%; /* Adjust the width as needed for your images */
     height: auto;
     object-fit: cover;
 }
 
-/* Centered Image in Row */
 .center-img {
-    margin: 0 auto;
-}
-
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-    .title {
-        font-size: 32px;
-        margin-top: 150px;
-    }
-
-    .envelope {
-        width: 100px;
-        height: 80px;
-    }
-
-    .letter {
-        font-size: 20px;
-        padding: 15px;
-        max-height: 400px;
-    }
-
-    .floating-images img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .image-row img {
-        width: 28%;
-    }
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 28px;
-        margin-top: 120px;
-    }
-
-    .envelope {
-        width: 90px;
-        height: 70px;
-    }
-
-    .letter {
-        font-size: 18px;
-        padding: 10px;
-        max-height: 350px;
-    }
-
-    .floating-images img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .image-row img {
-        width: 26%;
-    }
+    margin: 0 auto; /* Centers the image in the middle */
 }
