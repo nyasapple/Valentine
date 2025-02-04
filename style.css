@@ -1,4 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    color: #333;
+}
+
+/* Wrapper for Yes/No Section */
+.wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Question Text */
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* GIF */
+.gif {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Yes Button */
+.yes-btn {
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.yes-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* No Button */
+.no-btn {
+    position: absolute;
+    background-color: #ff4d4d;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.no-btn:hover {
+    background-color: #e43e3e;
+    transform: scale(1.05);
+}
 
 /* Home Page Styles */
 body.home {
@@ -6,11 +94,11 @@ body.home {
     background-color: #ffd6e0;
     text-align: center;
     margin: 0;
-    height: 100vh; /* Full height of the viewport */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers everything vertically */
-    align-items: center; /* Centers everything horizontally */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Title */
@@ -21,9 +109,12 @@ body.home {
     margin-bottom: 20px;
 }
 
-/* Envelope Container */
+/* Envelope Centered */
 .envelope-wrapper {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 150px;
     height: 120px;
 }
@@ -69,23 +160,23 @@ body.home {
     text-align: left;
     font-family: "Patrick Hand", cursive, sans-serif;
     font-size: 25px;
-    height:600%;
+    height: 600%;
     max-height: 750px;
     overflow-y: auto;
 }
 
 /* Style for Images Inside the Letter */
 .letter img {
-    width: 200px; /* Set square size */
+    width: 200px;
     height: 200px;
-    object-fit: cover; /* Ensures images are properly cropped */
-    margin: 10px 0; /* Adds spacing */
+    object-fit: cover;
+    margin: 10px 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-top: 10px solid transparent; /* Invisible border on top */
-    border-left: 10px solid transparent; /* Invisible border on the left */
-    border-right: 10px solid transparent; /* Invisible border on the right */
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
 .left-img {
@@ -150,16 +241,16 @@ body.tabs-page {
 /* Image Rows */
 .image-row {
     display: flex;
-    justify-content: space-between; /* Distributes images across the row */
-    margin-bottom: 20px; /* Adds space between rows */
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .left-img, .center-img, .right-img {
-    width: 30%; /* Adjust the width as needed for your images */
+    width: 30%;
     height: auto;
     object-fit: cover;
 }
 
 .center-img {
-    margin: 0 auto; /* Centers the image in the middle */
+    margin: 0 auto;
 }
