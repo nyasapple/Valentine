@@ -144,12 +144,11 @@ body.home {
     transform: translate(-50%, -50%);
 }
 
-/* Letter Popup */
 .letter {
     display: none;
     background: white;
     padding: 20px;
-    width: 600%;
+    width: 90%; /* Adjusts width to fit different screens */
     max-width: 650px;
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -159,16 +158,15 @@ body.home {
     transform: translate(-50%, -50%);
     text-align: left;
     font-family: "Patrick Hand", cursive, sans-serif;
-    font-size: 25px;
-    height: 600%;
-    max-height: 750px;
-    overflow-y: auto;
+    font-size: 20px; /* Slightly smaller font for better readability on mobile */
+    max-height: 80vh; /* Limits height to 80% of viewport */
+    overflow-y: auto; /* Enables scrolling if content overflows */
 }
 
 /* Style for Images Inside the Letter */
 .letter img {
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Adjusted size for mobile */
+    height: 150px;
     object-fit: cover;
     margin: 10px 0;
     display: block;
@@ -179,14 +177,47 @@ body.home {
     border-right: 10px solid transparent;
 }
 
+/* Image Alignment */
 .left-img {
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .right-img {
     float: right;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .letter {
+        width: 95%; /* More width for smaller screens */
+        font-size: 18px; /* Adjusted font size */
+        max-height: 85vh; /* Increased height on mobile */
+    }
+
+    .letter img {
+        width: 130px; /* Smaller images for better spacing */
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter {
+        font-size: 16px; /* Even smaller font for very small screens */
+        max-height: 90vh; /* Allows better use of screen */
+    }
+
+    .letter img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .left-img, .right-img {
+        float: none; /* Disables float on very small screens */
+        display: block;
+        margin: 10px auto;
+    }
 }
 
 /* Arrow to Tabs Page */
