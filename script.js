@@ -29,6 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Hide the No button
         noBtn.style.display = "none";
+
+        // Navigate to tabs.html after 2 seconds
+        setTimeout(() => {
+            window.location.href = "tabs.html";
+        }, 2000);
     });
 
     // Make No button move randomly on hover
