@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Navigate to tabs.html after 2 seconds
         setTimeout(() => {
             window.location.href = "tabs.html";
-        }, 2000);
+        }, 3500);
     });
 
     // Make No button move randomly on hover
