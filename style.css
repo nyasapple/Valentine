@@ -148,9 +148,9 @@ body.home {
     display: none;
     background: white;
     padding: 20px;
-    width: 90%; /* Adjusts width to fit different screens */
-    max-width: 650px;
-    border-radius: 5px;
+    width: 95vw; /* Uses 95% of viewport width, leaving a little margin */
+    max-width: 700px; /* Slightly increased max-width for larger screens */
+    border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 50%;
@@ -158,63 +158,62 @@ body.home {
     transform: translate(-50%, -50%);
     text-align: left;
     font-family: "Patrick Hand", cursive, sans-serif;
-    font-size: 20px; /* Slightly smaller font for better readability on mobile */
+    font-size: 20px;
     max-height: 80vh; /* Limits height to 80% of viewport */
-    overflow-y: auto; /* Enables scrolling if content overflows */
+    overflow-y: auto; /* Allows scrolling vertically */
 }
 
 /* Style for Images Inside the Letter */
 .letter img {
-    width: 150px; /* Adjusted size for mobile */
-    height: 150px;
+    width: 180px; /* Slightly larger images for clarity */
+    height: 180px;
     object-fit: cover;
     margin: 10px 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-top: 10px solid transparent;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
 }
 
 /* Image Alignment */
 .left-img {
     float: left;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .right-img {
     float: right;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .letter {
-        width: 95%; /* More width for smaller screens */
-        font-size: 18px; /* Adjusted font size */
-        max-height: 85vh; /* Increased height on mobile */
+        width: 92vw; /* Uses 92% of screen width to maintain balance */
+        font-size: 18px;
+        max-height: 85vh; /* Allows more vertical scrolling */
     }
 
     .letter img {
-        width: 130px; /* Smaller images for better spacing */
-        height: 130px;
+        width: 160px;
+        height: 160px;
     }
 }
 
 @media (max-width: 480px) {
     .letter {
-        font-size: 16px; /* Even smaller font for very small screens */
-        max-height: 90vh; /* Allows better use of screen */
+        width: 90vw; /* Fits screen well without touching borders */
+        font-size: 16px;
+        max-height: 90vh;
     }
 
     .letter img {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
 
+    /* Prevents horizontal overflow by making images center-aligned */
     .left-img, .right-img {
-        float: none; /* Disables float on very small screens */
+        float: none;
         display: block;
         margin: 10px auto;
     }
