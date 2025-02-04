@@ -165,13 +165,11 @@ body.home {
 
 /* Style for Images Inside the Letter */
 .letter img {
-    width: 180px; /* Slightly larger images for clarity */
+    width: 180px;
     height: 180px;
     object-fit: cover;
-    margin: 10px 0;
+    margin: 10px auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Image Alignment */
@@ -185,23 +183,42 @@ body.home {
     margin-left: 15px;
 }
 
+/* Styling for the 9 images at the end */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+    margin-top: 10px;
+}
+
+.image-row img {
+    width: 150px; /* Same size for all 9 images */
+    height: 150px;
+    object-fit: cover;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .letter {
-        width: 92vw; /* Uses 92% of screen width to maintain balance */
+        width: 92vw;
         font-size: 18px;
-        max-height: 85vh; /* Allows more vertical scrolling */
+        max-height: 85vh;
     }
 
     .letter img {
         width: 160px;
         height: 160px;
     }
+
+    .image-row img {
+        width: 130px; /* Smaller images for smaller screens */
+        height: 130px;
+    }
 }
 
 @media (max-width: 480px) {
     .letter {
-        width: 90vw; /* Fits screen well without touching borders */
+        width: 90vw;
         font-size: 16px;
         max-height: 90vh;
     }
@@ -211,7 +228,12 @@ body.home {
         height: 140px;
     }
 
-    /* Prevents horizontal overflow by making images center-aligned */
+    .image-row img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Prevents overflow for smaller screens */
     .left-img, .right-img {
         float: none;
         display: block;
