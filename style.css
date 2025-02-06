@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    color: #333;
+}
+
+/* Wrapper for Yes/No Section */
+.wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Question Text */
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* GIF */
+.gif {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Yes Button */
+.yes-btn {
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.yes-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* No Button */
+.no-btn {
+    position: absolute;
+    background-color: #ff4d4d;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.no-btn:hover {
+    background-color: #e43e3e;
+    transform: scale(1.05);
+}
+
+/* Home Page Styles */
+body.home {
+    font-family: 'Georgia', serif;
+    background-color: #ffd6e0;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title */
+.title {
+    font-size: 40px;
+    color: #ec1ba0;
+    font-family: "Patrick Hand", cursive, sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Envelope Centered */
+.envelope-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 120px;
+}
+
+/* Envelope Design */
+.envelope {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 2px solid #d63384;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Heart inside Envelope */
+.heart {
+    font-size: 30px;
+    color: #d63384;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.letter {
+    display: none;
+    background: white;
+    padding: 20px;
+    width: 95vw; /* Uses 95% of viewport width, leaving a little margin */
+    max-width: 700px; /* Slightly increased max-width for larger screens */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    font-family: "Patrick Hand", cursive, sans-serif;
+    font-size: 20px;
+    max-height: 80vh; /* Limits height to 80% of viewport */
+    overflow-y: auto; /* Allows scrolling vertically */
+}
+
+/* Style for Images Inside the Letter */
+.letter img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Image Alignment */
+.left-img {
+    float: left;
+    margin-right: 15px;
+}
+
+.right-img {
+    float: right;
+    margin-left: 15px;
+}
+
+/* Styling for the 9 images at the end */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+    margin-top: 10px;
+}
+
+.image-row img {
+    width: 150px; /* Same size for all 9 images */
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .letter {
+        width: 92vw;
+        font-size: 18px;
+        max-height: 85vh;
+    }
+
+    .letter img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .image-row img {
+        width: 130px; /* Smaller images for smaller screens */
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter {
+        width: 90vw;
+        font-size: 16px;
+        max-height: 90vh;
+    }
+
+    .letter img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .image-row img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Prevents overflow for smaller screens */
+    .left-img, .right-img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/* Arrow to Tabs Page */
+.arrow-circle {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 30px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #d63384;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabs Page */
+body.tabs-page {
+    font-family: 'Georgia', serif;
+    background-color: #fff0f5;
+    text-align: center;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.tab-btn {
+    display: block;
+    background: #ffcccc;
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.tab-btn:hover {
+    background: #ff6699;
+    color: white;
+}
+
+/* Image Rows */
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.left-img, .center-img, .right-img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+.center-img {
+    margin: 0 auto;
+}
+
+/* Rose Day Page */
+body.rose-day {
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    background-attachment: fixed; /* Ensures the gradient covers the whole page */
+    background-size: cover; /* Ensures it stretches properly */
+    color: #4a002b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+/* Romantic Heading */
+h1 {
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Love Message */
+.rose-message {
+    font-size: 22px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Patrick Hand', cursive;
+}
+
+/* Floating Rose Image */
+.rose-image {
+    width: 180px;
+    height: auto;
+    margin-top: 20px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Animated Hearts in the Background */
+.heart-animation::before, .heart-animation::after {
+    content: "❤️";
+    font-size: 50px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    opacity: 0.4;
+    animation: hearts 3s linear infinite;
+}
+
+.heart-animation::after {
+    left: 30%;
+    animation-duration: 6s;
+}
+
+@keyframes hearts {
+    0% { transform: translateY(0); opacity: 0.4; }
+    50% { opacity: 0.7; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Back Button */
+.back-button {
+    margin-top: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    background: #d63384;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #a82465;
+    transform: scale(1.05);
+}
