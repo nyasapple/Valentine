@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propose Day</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Matching Rose Day Page Styles */
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            background-attachment: fixed;
+            background-size: cover;
+            color: #4a002b;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
-            color: #4a002b;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+            padding-bottom: 50px;
         }
 
-        .wrapper {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 90%;
-            max-width: 500px;
-        }
-
-        .message {
+        /* Message Box */
+        .propose-message {
             font-size: 22px;
-            font-weight: bold;
-            color: #d6336c;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             margin-bottom: 20px;
         }
 
+        /* GIF Styling */
         .gif-container {
-            margin-bottom: 20px;
-            animation: bounce 1.5s infinite alternate;
+            animation: float 4s ease-in-out infinite;
         }
 
         .gif-container img {
@@ -48,45 +47,49 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        @keyframes bounce {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
         }
 
-        .back-btn {
-            padding: 12px 24px;
+        @keyframes hearts {
+            0% { transform: translateY(0); opacity: 0.4; }
+            50% { opacity: 0.7; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+
+        /* Back Button */
+        .back-button {
+            margin-top: 30px;
             font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            background-color: #d63384;
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             text-decoration: none;
-            display: inline-block;
+            background: #d63384;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
-        .back-btn:hover {
-            background-color: #a82465;
+        .back-button:hover {
+            background: #a82465;
             transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="message">
-            Aap yha kaise? Aapka Propose Day ka msg tho aapko mil chuki h na? 😏💕
-        </div>
-
-        <div class="gif-container">
-            <img src="4.gif" alt="Bubu and Dudu GIF">
-        </div>
-
-        <a href="tabs.html" class="back-btn">Back</a>
+    <div class="propose-message">
+        Aap yha kaise? Aapka Propose Day ka message tho aapko mil chuki h na? 😏💖
     </div>
+
+    <div class="gif-container">
+        <img src="4.gif" alt="Bubu and Dudu GIF">
+    </div>
+
+    <a href="tabs.html" class="back-button">Back</a>
 
 </body>
 </html>
